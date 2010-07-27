@@ -1,0 +1,14 @@
+body {
+  background-color: rgb(185,5,31);
+}
+
+#logo {
+  background-image: url('../images/bazinga-1.jpg');
+  width: 410px;
+  height: 500px;
+  float: left;
+  opacity: 0;
+}
+#button {
+  float: right;
+}

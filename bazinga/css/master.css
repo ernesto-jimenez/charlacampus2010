@@ -1,0 +1,54 @@
+@-webkit-keyframes pulsate {
+  0% { opacity: 0; }
+  40% { opacity: 1; }
+  60% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes pulsate {
+  0% { opacity: 0; }
+  40% { opacity: 1; }
+  60% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+button {
+  display: inline-block;
+  background-color: rgb(112,112,112);
+  background-image: -moz-linear-gradient(100% 100% 90deg, rgb(112,112,112), rgb(184,184,184));
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgb(112,112,112)), to(rgb(184,184,184)));
+  font-size: 30px;
+  padding:5px 10px 6px 10px;
+  font-weight:bold;
+  text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+  border:1px solid rgba(0,0,0,0.4);
+  -moz-border-radius: 5px;
+  -moz-box-shadow: 0px 0px 2px rgba(0,0,0,0.5);
+  -webkit-border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 2px rgba(0,0,0,0.5);
+}
+
+button:active {
+  background-image: -moz-linear-gradient(100% 100% 90deg, rgb(184,184,184), rgb(112,112,112));
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgb(184,184,184)), to(rgb(112,112,112)));
+}
+
+#logo.pulsate {
+  -webkit-animation-name: pulsate;
+  -webkit-animation-play-state: running;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+
+  animation-name: pulsate;
+  animation-play-state: running;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+#logo.steady {
+  -webkit-animation-play-state: paused;
+
+  animation-play-state: paused;
+}
